@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#100d19" />
+    <meta name="description" content="Your song, your spotlight. Pick a track and make tonight yours with Afterglow karaoke." />
+    <title>Afterglow — Your song, your spotlight</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <aside class="sidebar" aria-label="Main navigation">
+        <a class="brand" href="#" aria-label="Afterglow home">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+          <span>afterglow<span class="brand-period">.</span></span>
+        </a>
+
+        <div class="nav-group">
+          <p class="nav-label">MENU</p>
+          <a class="nav-link active" href="#discover"><span class="nav-icon">⌂</span> Discover</a>
+          <a class="nav-link" href="#browse"><span class="nav-icon">◷</span> Explore songs</a>
+          <button class="nav-link" id="favorites-nav"><span class="nav-icon">♡</span> Your favorites</button>
+        </div>
+
+        <div class="sidebar-note">
+          <div class="note-spark">✳</div>
+          <p class="note-title">Every voice<br />deserves a stage.</p>
+          <p class="note-copy">Find your song. Feel the moment.</p>
+          <a href="#browse" class="note-link">Find your next song <span>↗</span></a>
+        </div>
+        <div class="sidebar-bottom">
+          <span class="live-dot"></span>
+          <span>YOUR PRIVATE KARAOKE ROOM</span>
+        </div>
+      </aside>
+
+      <main class="main-content" id="discover">
+        <header class="topbar">
+          <div class="mobile-brand">
+            <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+            afterglow<span class="brand-period">.</span>
+          </div>
+          <div class="breadcrumbs"><span>Home</span><span class="crumb-slash">/</span><strong>Discover</strong></div>
+          <div class="topbar-actions">
+            <button class="icon-button search-shortcut" id="focus-search" aria-label="Search songs"><span>⌕</span></button>
+            <button class="avatar" id="profile-button" aria-label="Your profile">G</button>
+          </div>
+        </header>
+
+        <section class="hero">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="eyebrow-line"></span> YOUR MOMENT STARTS HERE</div>
+            <h1>Find your song.<br /><span>Feel everything.</span></h1>
+            <p class="hero-description">The mic is yours. Browse the songs you love<br class="desktop-break" /> and make tonight a little more unforgettable.</p>
+            <a class="primary-button" href="#browse">Explore the songbook <span>↗</span></a>
+            <div class="hero-caption"><span class="caption-dot"></span> A little louder. A little more you.</div>
+          </div>
+          <div class="hero-art">
+            <div class="hero-orbit orbit-one"></div>
+            <div class="hero-orbit orbit-two"></div>
+            <div class="hero-glow"></div>
+            <div class="hero-singer">
+              <div class="singer-hair"></div>
+              <div class="singer-face"><span class="singer-eye"></span><span class="singer-nose"></span></div>
+              <div class="singer-neck"></div>
+              <div class="singer-body"></div>
+              <div class="singer-arm"></div>
+              <div class="singer-mic"><span></span></div>
+            </div>
+            <div class="floating-star star-a">✳</div>
+            <div class="floating-star star-b">✦</div>
+            <div class="floating-star star-c">✧</div>
+            <div class="art-tag"><span class="tag-wave">〰</span><span>THIS IS<br /><strong>YOUR STAGE</strong></span></div>
+            <span class="art-note note-a">♫</span><span class="art-note note-b">♪</span>
+            <div class="art-bottom-label">SING IT LIKE YOU MEAN IT</div>
+          </div>
+          <div class="hero-index"><span>01</span><i></i> 03</div>
+        </section>
+
+        <section class="songbook" id="browse">
+          <div class="section-heading">
+            <div>
+              <div class="eyebrow section-eyebrow"><span class="eyebrow-line"></span> THE SONGBOOK</div>
+              <h2>Pick your <span>next anthem.</span></h2>
+            </div>
+            <span class="song-count" id="song-count">06 TRACKS</span>
+          </div>
+
+          <div class="library-controls">
+            <label class="search-box" for="song-search">
+              <span class="search-icon">⌕</span>
+              <input id="song-search" type="search" placeholder="Search a song, artist, or mood..." autocomplete="off" />
+              <span class="search-key">↵</span>
+            </label>
+            <div class="filter-list" role="group" aria-label="Filter songs by genre">
+              <button class="filter-chip selected" data-filter="All">All songs <span>06</span></button>
+              <button class="filter-chip" data-filter="Pop">Pop</button>
+              <button class="filter-chip" data-filter="Indie">Indie</button>
+              <button class="filter-chip" data-filter="Classics">Classics</button>
+            </div>
+          </div>
+
+          <div class="song-grid" id="song-grid" aria-live="polite"></div>
+          <div class="empty-state" id="empty-state" hidden>
+            <span>♫</span>
+            <h3>No songs in this spotlight.</h3>
+            <p>Try a different search or choose another mood.</p>
+            <button id="clear-search">Clear your search</button>
+          </div>
+        </section>
+
+        <footer class="page-footer"><span>MADE FOR THE MOMENTS YOU SING OUT LOUD.</span><span>© AFTERGLOW 2026 <i>✳</i></span></footer>
+      </main>
+    </div>
+
+    <section class="player-bar" id="player-bar" aria-label="Karaoke player" hidden>
+      <button class="player-cover" id="player-cover" aria-label="Open karaoke stage"></button>
+      <div class="player-track">
+        <strong id="player-title">Song title</strong>
+        <span id="player-artist">Artist</span>
+      </div>
+      <button class="player-favorite" id="player-favorite" aria-label="Add to favorites">♡</button>
+      <div class="player-controls">
+        <button class="control-button" id="restart-track" aria-label="Restart song">↺</button>
+        <button class="play-button" id="play-toggle" aria-label="Play">▶</button>
+        <button class="control-button" id="next-track" aria-label="Next song">↠</button>
+      </div>
+      <div class="player-timeline">
+        <span id="current-time">0:00</span>
+        <input id="progress" type="range" min="0" max="100" value="0" aria-label="Song progress" />
+        <span id="duration">0:00</span>
+      </div>
+      <button class="lyrics-button" id="open-stage"><span>▤</span> Lyrics</button>
+    </section>
+
+    <div class="stage-overlay" id="stage-overlay" hidden>
+      <section class="stage-modal" role="dialog" aria-modal="true" aria-labelledby="stage-heading">
+        <button class="stage-close" id="close-stage" aria-label="Close karaoke stage">×</button>
+        <div class="stage-topline"><span class="live-dot"></span> AFTERGLOW KARAOKE ROOM <span class="stage-room-tag">JUST YOU & THE MUSIC</span></div>
+        <div class="stage-layout">
+          <div class="stage-info">
+            <div class="stage-art" id="stage-art"></div>
+            <p class="stage-kicker">NOW ON YOUR STAGE</p>
+            <h2 id="stage-heading">Song title</h2>
+            <p class="stage-artist" id="stage-artist">Artist</p>
+            <div class="stage-controls">
+              <button class="control-button" id="stage-restart" aria-label="Restart song">↺</button>
+              <button class="play-button stage-play" id="stage-play" aria-label="Play">▶</button>
+              <button class="control-button" id="stage-next" aria-label="Next song">↠</button>
+            </div>
+            <div class="stage-progress"><span id="stage-elapsed">0:00</span><input id="stage-progress" type="range" min="0" max="100" value="0" aria-label="Song progress" /><span id="stage-duration">0:00</span></div>
+            <label class="load-audio" for="audio-upload"><span>＋</span> Add your backing track</label>
+            <input id="audio-upload" type="file" accept="audio/*" hidden />
+            <p class="stage-hint"><span>✳</span> Demo lyrics are cues. Bring your own track.</p>
+          </div>
+          <div class="lyrics-panel">
+            <div class="lyrics-header"><div><span class="eyebrow section-eyebrow"><span class="eyebrow-line"></span> THE LYRICS</span><p>Sing along, right on time.</p></div><button class="lyrics-mode" aria-label="Lyrics display settings">Aa <span>⌄</span></button></div>
+            <div class="lyrics-scroll" id="lyrics-scroll"></div>
+            <div class="lyrics-progress-caption"><span class="live-dot"></span> LYRICS SYNCED TO THE MOMENT</div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
